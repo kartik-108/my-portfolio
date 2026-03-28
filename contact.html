@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Karthik Vijay</title>
+
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div id="navbar"></div>
+
+<!-- MAIN -->
+<main class="contact-section">
+
+    <h1 class="section-title">Get In Touch</h1>
+
+    <p class="contact-subtext">
+        Have an idea, project, or just want to connect? Feel free to reach out.
+    </p>
+
+    <div class="contact-wrapper">
+
+        <!-- ================= FORM CARD ================= -->
+        <div class="contact-card form-card">
+
+            <h3>Send a Message</h3>
+            <p class="form-subtext">Have something in mind? Let’s build it together.</p>
+
+            <form id="contactForm" class="contact-form">
+
+                <div class="input-group">
+                    <input type="text" id="name" name="name" required>
+                    <label for="name">Name</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="email" id="email" name="email" required>
+                    <label for="email">Email</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="text" id="subject" name="subject" required>
+                    <label for="subject">Subject</label>
+                </div>
+
+                <div class="input-group">
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                    <label for="message">Message</label>
+                </div>
+
+                <button type="submit" class="send-btn">
+                    Send Message
+                </button>
+
+                <p id="formStatus"></p>
+
+            </form>
+
+        </div>
+
+        <!-- ================= INFO CARD ================= -->
+        <div class="contact-card info-card">
+
+            <h3>Let's Connect</h3>
+
+            <p class="contact-subtext">
+                Feel free to reach out — whether it's collaboration, ideas, or just a conversation.
+            </p>
+
+            <div class="contact-links">
+
+                <a href="mailto:vijayankarthik2006@gmail.com" class="contact-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>Email</span>
+                </a>
+
+                <a href="https://www.linkedin.com/in/karthikvijayofficial/" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   class="contact-item">
+                    <i class="fa-brands fa-linkedin"></i>
+                    <span>LinkedIn</span>
+                </a>
+
+                <a href="https://github.com/kartik-108" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   class="contact-item">
+                    <i class="fa-brands fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</main>
+
+<!-- FOOTER -->
+<div id="footer"></div>
+
+<!-- JS (CLEAN 🔥 NO DUPLICATES) -->
+<script src="js/components.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script src="js/contact.js"></script>
+<script src="js/navbar.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/parallax.js"></script>
+<script src="js/cursor.js"></script>
+
+</body>
+</html>

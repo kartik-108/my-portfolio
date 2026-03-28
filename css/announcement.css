@@ -1,0 +1,324 @@
+/* MAIN BACKGROUND */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+
+    background-color: #0b0f17;
+    background-image: 
+        linear-gradient(rgba(0,255,255,0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,255,255,0.06) 1px, transparent 1px);
+    
+    background-size: 40px 40px; /* 🔥 grid size */
+}
+body::before {
+    content: "";
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    width: 600px;
+    height: 600px;
+
+    background: radial-gradient(circle, rgba(0,255,255,0.12), transparent 70%);
+    
+    z-index: -1;
+}
+body::before {
+    content: "";
+    position: fixed;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 500px;
+    height: 500px;
+
+    background: radial-gradient(circle,
+        rgba(0,255,255,0.07), 
+        rgba(0,255,255,0.03),
+        transparent 70%
+    );
+
+    z-index: -1;
+}
+/* ================= HERO ================= */
+.announcement-hero {
+    text-align: center;
+    padding: 100px 20px 30px;
+}
+
+.announcement-hero h1 {
+    font-size: 3rem;
+    color: #00f7ff;
+    text-shadow: 0 0 20px rgba(0,247,255,0.3);
+}
+
+/* ================= SECTION ================= */
+.announcement-section {
+    padding: 60px 10%;
+}
+
+.announcement-section h2 {
+    color: #00f7ff;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+/* ================= TIMELINE ================= */
+.timeline {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 18px;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to bottom, #00f7ff, transparent);
+    opacity: 0.6;
+}
+
+/* ================= BLOCK ================= */
+.announcement-block {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 40px;
+    background: rgba(255,255,255,0.04);
+    padding: 28px;
+    border-radius: 18px;
+    align-items: center;
+    position: relative;
+    border: 1px solid rgba(255,255,255,0.06);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    transition: 0.3s ease;
+}
+
+.announcement-block:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(0,255,255,0.15);
+    border-color: rgba(0,247,255,0.3);
+}
+
+/* timeline dot */
+.announcement-block::before {
+    content: "";
+    position: absolute;
+    left: -2px;
+    top: 30px;
+    width: 12px;
+    height: 12px;
+    background: #00f7ff;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #00f7ff;
+}
+
+/* ================= MEDIA ================= */
+.media {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 260px;
+}
+
+.media img,
+.media video {
+    width: 100%;
+    height: 100%;
+    border-radius: 14px;
+    object-fit: cover;
+    display: block;
+}
+
+.media img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(0,247,255,0.4);
+}
+
+/* ================= SLIDER ================= */
+.slider {
+    position: relative;
+    width: 100%;
+    width: 260px;
+}
+
+.slide {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.slide.active {
+    display: block;
+    opacity: 1;
+}
+.slide img {
+    width: 100%;
+    display: block;
+}
+
+/* controls BELOW image */
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.controls button {
+    background: rgba(255,255,255,0.08);
+    border: none;
+    color: white;
+    padding: 6px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.controls button:hover {
+    background: #00f7ff;
+    color: black;
+}
+
+/* ================= CONTENT ================= */
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 600px;
+}
+
+.content h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.content p {
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 10px;
+    opacity: 0.85;
+}
+
+.content span {
+    font-size: 12px;
+    opacity: 0.6;
+}
+
+/* ================= VIEWER ================= */
+#viewer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background: rgba(0,0,0,0.95);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+#viewer img {
+    max-width: 95%;
+    max-height: 95%;
+    border-radius: 10px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+
+    .announcement-block {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .media img {
+        width: 100%;
+    }
+
+    .content {
+        align-items: center;
+    }
+
+    .timeline::before {
+        left: 10px;
+    }
+
+    .announcement-block::before {
+        left: -6px;
+    }
+}
+#viewer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background: rgba(0,0,0,0.96);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+.viewer-content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+/* FULL VIEW MEDIA FIX */
+.viewer-media {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+#viewer img {
+    max-width: 90vw;
+    max-height: 90vh;
+}
+.viewer-close {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 26px;
+    background: rgba(0,0,0,0.6);
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 6px 12px;
+    border-radius: 50%;
+    z-index: 10;
+}
+/* buttons */
+.viewer-prev,
+.viewer-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.1);
+    border: none;
+    color: white;
+    font-size: 24px;
+    padding: 10px 14px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.viewer-prev {
+    left: 20px;
+}
+
+.viewer-next {
+    right: 20px;
+}

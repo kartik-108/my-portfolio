@@ -1,0 +1,113 @@
+/* ================= GLOBAL RESET ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ================= BODY BACKGROUND + GRID ================= */
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: white;
+    position: relative;
+    z-index: 1;
+    padding-top: 50px;
+    background-color: #0b0f19;
+    background-image: 
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    animation: moveGrid 20s linear infinite;
+}
+
+@keyframes moveGrid {
+    from { background-position: 0 0; }
+    to { background-position: 0 40px; }
+}
+
+/* ================= MAIN ================= */
+
+main {
+    flex: 1;
+}
+
+/* ================= CURSOR GLOW ================= */
+
+body::after {
+    content: "";
+    position: fixed;
+    top: var(--y);
+    left: var(--x);
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, rgba(0,245,212,0.15), transparent 70%);
+    pointer-events: none;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+
+/* ================= HERO SECTION ================= */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+    gap: 80px;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+
+/* ================= PARTICLES ================= */
+
+.particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.particles span {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: rgba(0, 245, 212, 0.8);
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0,245,212,0.6);
+    animation: floatParticles 20s linear infinite;
+}
+
+@keyframes floatParticles {
+    from {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-10vh);
+        opacity: 0;
+    }
+}

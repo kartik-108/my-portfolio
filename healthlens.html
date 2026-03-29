@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HealthLens Case Study</title>
+
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/healthlens.css">
+</head>
+
+<body>
+
+<!-- ✅ NAVBAR -->
+<div id="navbar"></div>
+
+<div class="container">
+
+  <!-- HERO -->
+  <section class="case-hero">
+    <h1>HealthLens AI</h1>
+    <p>
+      A privacy-first AI healthcare assistant powered by a locally deployed
+      Large Language Model (LLaMA 3.1 via Ollama).
+    </p>
+  </section>
+
+  <!-- INTRO -->
+  <section class="case-section">
+    <h2>📌 Project Overview</h2>
+    <p>
+      HealthLens is an AI-powered healthcare assistance system designed to provide
+      early-stage health insights based on user-reported symptoms. The goal of this
+      project is to bridge the gap between symptom awareness and medical consultation
+      by offering quick, intelligent, and privacy-focused responses.
+    </p>
+
+    <p>
+      Unlike traditional AI tools that rely on cloud-based APIs, HealthLens operates
+      using a locally deployed large language model, ensuring complete control over
+      data privacy while maintaining fast response times.
+    </p>
+  </section>
+
+  <!-- PROBLEM -->
+  <section class="case-section">
+    <h2>🚨 Problem Statement</h2>
+
+    <p>
+      In many real-world scenarios, individuals tend to ignore early symptoms due to
+      lack of awareness, time constraints, or limited access to healthcare professionals.
+      This delay can lead to worsening conditions and late diagnosis of serious illnesses.
+    </p>
+
+    <p>
+      Existing digital health tools often require internet connectivity and rely heavily
+      on external APIs, which introduces latency, dependency, and privacy concerns.
+      Users are often hesitant to share sensitive health data with third-party services.
+    </p>
+
+    <p>
+      Therefore, there is a need for a system that can:
+    </p>
+
+    <ul>
+      <li>Provide instant health-related insights</li>
+      <li>Maintain strict user data privacy</li>
+      <li>Work efficiently without heavy cloud dependency</li>
+    </ul>
+  </section>
+
+  <!-- OBJECTIVE -->
+  <section class="case-section">
+    <h2>🎯 Objective</h2>
+
+    <p>
+      The primary objective of HealthLens is to develop a smart healthcare assistant
+      that can analyze user symptoms and generate meaningful insights using artificial
+      intelligence, while ensuring data security and performance efficiency.
+    </p>
+
+    <p>
+      The system aims to:
+    </p>
+
+    <ul>
+      <li>Assist users in understanding potential health conditions</li>
+      <li>Encourage early medical consultation</li>
+      <li>Reduce dependency on external AI APIs</li>
+      <li>Provide real-time responses using local computation</li>
+    </ul>
+  </section>
+
+  <!-- SOLUTION -->
+  <section class="case-section">
+    <h2>💡 Proposed Solution</h2>
+
+    <p>
+      HealthLens introduces a locally hosted AI-powered system that processes user
+      input through a backend server connected to a large language model. The model
+      interprets symptoms and generates possible insights in natural language.
+    </p>
+
+    <p>
+      By using Ollama as the runtime environment, the LLaMA 3.1 model is executed
+      directly on the user's machine, eliminating the need for external API calls.
+    </p>
+
+    <p>
+      This architecture ensures:
+    </p>
+
+    <ul>
+      <li>Low latency response time</li>
+      <li>Offline capability</li>
+      <li>Enhanced data privacy</li>
+    </ul>
+  </section>
+
+  <!-- AI WORKING -->
+  <section class="case-section">
+    <h2>🤖 How the AI System Works</h2>
+
+    <p>
+      The working of HealthLens is based on a structured pipeline that connects
+      the user interface with the AI model through a backend server.
+    </p>
+
+    <p>
+      The process begins when a user enters symptoms into the frontend interface.
+      This input is then sent to the backend server, which acts as a bridge between
+      the UI and the AI model.
+    </p>
+
+    <p>
+      The backend formats the input and forwards it to the locally running LLaMA 3.1
+      model through Ollama. The model processes the text using natural language
+      understanding and generates a relevant response.
+    </p>
+
+    <p>
+      Finally, the response is sent back to the frontend and displayed to the user
+      in a readable format.
+    </p>
+  </section>
+
+  <!-- ARCHITECTURE -->
+  <section class="case-section">
+    <h2>🧠 System Architecture</h2>
+
+    <p>
+      The architecture of HealthLens follows a modular design consisting of three
+      primary layers:
+    </p>
+
+    <ul>
+      <li><strong>Frontend:</strong> Handles user interaction and input collection</li>
+      <li><strong>Backend:</strong> Processes requests and communicates with AI</li>
+      <li><strong>AI Layer:</strong> LLaMA 3.1 model running via Ollama</li>
+    </ul>
+
+    <p>
+      Data flows sequentially from the user to the frontend, then to the backend,
+      and finally to the AI model. The generated response follows the reverse path.
+    </p>
+  </section>
+
+  <!-- TECH STACK -->
+  <section class="case-section">
+    <h2>⚙️ Tech Stack</h2>
+
+    <ul>
+      <li><strong>Frontend:</strong> HTML, CSS, JavaScript</li>
+      <li><strong>Backend:</strong> Node.js / Python</li>
+      <li><strong>AI Model:</strong> LLaMA 3.1</li>
+      <li><strong>Runtime:</strong> Ollama</li>
+      <li><strong>Deployment:</strong> Cloudflare Tunnel</li>
+    </ul>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="case-section">
+    <h2>✨ Key Features</h2>
+
+    <ul>
+      <li>AI-powered symptom analysis</li>
+      <li>Local model execution (privacy-focused)</li>
+      <li>Real-time response system</li>
+      <li>Minimal external dependency</li>
+      <li>Simple and user-friendly interface</li>
+    </ul>
+  </section>
+
+  <!-- ADVANTAGES -->
+  <section class="case-section">
+    <h2>✅ Advantages</h2>
+
+    <p>
+      One of the biggest advantages of HealthLens is its privacy-first approach.
+      Since all computations are performed locally, user data is never transmitted
+      to external servers.
+    </p>
+
+    <p>
+      Additionally, the system is cost-effective as it does not rely on paid APIs,
+      making it suitable for scalable deployment.
+    </p>
+  </section>
+
+  <!-- LIMITATIONS -->
+  <section class="case-section">
+    <h2>⚠️ Limitations</h2>
+
+    <p>
+      Despite its advantages, the system has certain limitations. The accuracy of
+      responses depends on the model's training and may not replace professional
+      medical advice.
+    </p>
+
+    <p>
+      Additionally, running a local LLM requires sufficient hardware resources,
+      which may not be available on all devices.
+    </p>
+  </section>
+
+  <!-- FUTURE -->
+  <section class="case-section">
+    <h2>🚀 Future Scope</h2>
+
+    <p>
+      Future improvements include integrating real-time doctor consultation,
+      expanding the medical dataset, and deploying the system on cloud-based
+      infrastructure for wider accessibility.
+    </p>
+
+    <p>
+      A mobile application version is also planned to enhance usability and reach.
+    </p>
+  </section>
+
+</div>
+
+<!-- ✅ FOOTER -->
+<div id="footer"></div>
+
+<!-- JS Files -->
+<script src="js/components.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/cursor.js"></script>
+<script src="js/navbar.js"></script>
+<script src="js/healthlens.js"></script>
+
+</body>
+</html>

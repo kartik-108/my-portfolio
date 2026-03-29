@@ -50,3 +50,8 @@ window.addEventListener("load", () => {
     }, 1500);
 
 });
+const el = document.querySelector(".typing-text");
+
+if (el) {
+  el.textContent = "your text";
+}

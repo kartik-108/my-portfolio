@@ -6,3 +6,10 @@ document.addEventListener("mousemove", (e) => {
 
     hero.style.transform = `translate(${x}px, ${y}px)`;
 });
+const parallax = document.querySelector(".parallax");
+
+if (parallax) {
+  window.addEventListener("scroll", () => {
+    parallax.style.transform = `translateY(${window.scrollY * 0.3}px)`;
+  });
+}

@@ -52,19 +52,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const viewer = document.getElementById("viewer");
 
+    // 🔥 IMPORTANT: default hidden
+    if (viewer) {
+        viewer.style.display = "none";
+    }
+
     window.openViewer = function(element) {
 
         const slider = element.closest(".slider");
 
-        // 🔥 CASE 1: SLIDER ITEMS
         if (slider) {
             const items = slider.querySelectorAll(".slide img, .slide video");
             currentItems = Array.from(items);
             currentIndex = currentItems.indexOf(element);
-        }
-
-        // 🔥 CASE 2: SINGLE ITEM
-        else {
+        } else {
             currentItems = [element];
             currentIndex = 0;
         }
@@ -78,41 +79,30 @@ document.addEventListener("DOMContentLoaded", () => {
     function renderViewer() {
         const item = currentItems[currentIndex];
 
-        let mediaHTML = "";
+        let media = "";
 
-        // IMAGE
         if (item.tagName === "IMG") {
-            mediaHTML = `<img src="${item.src}" class="viewer-media">`;
-        }
-
-        // VIDEO
-        else if (item.tagName === "VIDEO") {
-            mediaHTML = `
+            media = `<img src="${item.src}" class="viewer-media">`;
+        } else if (item.tagName === "VIDEO") {
+            media = `
                 <video class="viewer-media" controls autoplay>
                     <source src="${item.src}" type="video/mp4">
                 </video>
             `;
         }
 
-        // ARROWS (only if multiple)
-        let arrowsHTML = "";
-        if (currentItems.length > 1) {
-            arrowsHTML = `
-                <button class="viewer-prev">❮</button>
-                <button class="viewer-next">❯</button>
-            `;
-        }
-
-        // 🔥 FINAL VIEWER STRUCTURE (WITH CLOSE BUTTON)
         viewer.innerHTML = `
             <div class="viewer-content">
                 <button class="viewer-close">✕</button>
-                ${mediaHTML}
-                ${arrowsHTML}
+                ${media}
+                ${currentItems.length > 1 ? `
+                    <button class="viewer-prev">❮</button>
+                    <button class="viewer-next">❯</button>
+                ` : ""}
             </div>
         `;
 
-        // ================= BUTTON EVENTS =================
+        // 🔥 EVENTS (after render)
         const nextBtn = viewer.querySelector(".viewer-next");
         const prevBtn = viewer.querySelector(".viewer-prev");
         const closeBtn = viewer.querySelector(".viewer-close");
@@ -137,14 +127,14 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    // ================= CLOSE VIEWER =================
     window.closeViewer = function() {
         viewer.style.display = "none";
         viewer.innerHTML = "";
         document.body.style.overflow = "auto";
     };
 
-    // click outside close
+
+    // outside click close
     viewer.addEventListener("click", (e) => {
         if (e.target.id === "viewer") closeViewer();
     });

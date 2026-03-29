@@ -20,8 +20,8 @@
 .hero-title {
     font-size: 48px;
     font-weight: 700;
-    line-height: 1.1;        /* Better vertical density */
-    letter-spacing: -1px;    /* Premium look */
+    line-height: 1.1;
+    letter-spacing: -1px;
 
     opacity: 0;
     transform: translateY(20px);
@@ -56,7 +56,6 @@
     animation-delay: 1s;
 }
 
-/* Blinking cursor */
 .typing-text::after {
     content: "|";
     margin-left: 5px;
@@ -69,12 +68,13 @@
     margin-top: 35px;
     display: flex;
     gap: 20px;
+    flex-wrap: wrap; /* 🔥 overflow safety */
 }
 
 .btn-primary {
     background: #00f5d4;
     color: black;
-    padding: 12px 24px;   /* slightly improved proportions */
+    padding: 12px 24px;
     border-radius: 8px;
     text-decoration: none;
     font-weight: 600;
@@ -108,7 +108,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: translateY(-10px); /* optical center adjust */
+    transform: translateY(-10px);
 }
 
 /* Radar Ring */
@@ -129,7 +129,7 @@
     z-index: 0;
 }
 
-/* Radar starts only when active */
+/* Radar animation */
 .hero-right.radar-active::before {
     animation: rotate 8s linear infinite;
 }
@@ -138,6 +138,7 @@
     position: relative;
     width: 320px;
     height: 320px;
+    max-width: 100%; /* 🔥 overflow fix */
     object-fit: cover;
     border-radius: 50%;
     border: 4px solid #0b0f19;
@@ -172,13 +173,6 @@
 
 /* ================= ANIMATIONS ================= */
 
-@keyframes heroEntry {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 @keyframes fadeUp {
     to {
         opacity: 1;
@@ -189,13 +183,6 @@
 @keyframes fadeIn {
     to {
         opacity: 1;
-    }
-}
-
-@keyframes imageReveal {
-    to {
-        opacity: 1;
-        transform: scale(1);
     }
 }
 
@@ -211,4 +198,64 @@
 @keyframes scrollWheel {
     0% { opacity: 1; top: 8px; }
     100% { opacity: 0; top: 20px; }
+}
+
+/* ================= HERO MOBILE FIX ================= */
+
+@media (max-width: 768px) {
+    .hero-title {
+    word-break: keep-all;   /* 🔥 prevent weird break */
+    }
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+        padding-top: 160px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 60px;
+        width: 100%;
+    }
+
+    .hero-left {
+        max-width: 100%;
+    }
+
+    .hero-title {
+        font-size: 36px;
+    }
+
+    .hero-subtitle {
+        font-size: 18px;
+        margin: 15px auto;
+    }
+
+    .typing-text {
+        font-size: 18px;
+    }
+
+    .hero-buttons {
+        margin-top: 40px;
+        justify-content: center;
+    }
+
+    .hero-right {
+        margin-top: 10px;
+        transform: none;
+    }
+
+    .hero-right img {
+        width: 220px;
+        height: 220px;
+    }
+
+    .hero-right::before {
+        width: 260px;
+        height: 260px;
+    }
+
+    .scroll-down {
+        display: flex;
+        justify-content: center;
+    }
 }

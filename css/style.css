@@ -111,3 +111,20 @@ body::after {
         opacity: 0;
     }
 }
+html, body {
+    overflow-x: hidden;
+}
+@media (max-width: 768px) {
+
+    .skills,
+    .cards,
+    .featured-project,
+    .about-preview {
+        overflow: hidden;
+        padding-left: 20px;
+        padding-right: 20px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+}

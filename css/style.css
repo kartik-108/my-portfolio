@@ -128,3 +128,66 @@ html, body {
     }
 
 }
+/* ================= CERTIFICATE IMAGE ================= */
+
+.certificate-img{
+    width:100%;
+    height:220px;
+
+    object-fit:cover;
+    object-position:top center;
+
+    border-radius:16px;
+
+    display:block;
+}
+
+/* ================= NPTEL BADGES ================= */
+
+.cert-highlights{
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+
+    margin:15px 0;
+}
+
+.cert-highlights span{
+    padding:6px 12px;
+
+    border-radius:20px;
+
+    background:rgba(0,255,255,.12);
+    border:1px solid rgba(0,255,255,.25);
+
+    font-size:.85rem;
+    font-weight:600;
+}
+
+/* ================= NPTEL CARD ================= */
+
+.project-card:first-of-type{
+    max-width:100%;
+}
+
+.project-card:first-of-type h3{
+    font-size:2rem;
+}
+
+.project-card:first-of-type .project-buttons a{
+    font-weight:600;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width:768px){
+
+    .certificate-img{
+        height:180px;
+    }
+
+    .project-card:first-of-type h3{
+        font-size:1.5rem;
+    }
+
+}

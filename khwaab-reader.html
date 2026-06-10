@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KHWAAB | Reader</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <style>
+
+        .reader-section{
+            max-width:1200px;
+            margin:auto;
+            padding:120px 20px 60px;
+        }
+
+        .reader-header{
+            text-align:center;
+            margin-bottom:40px;
+        }
+
+        .reader-header h1{
+            font-size:3rem;
+            margin-bottom:10px;
+        }
+
+        .reader-header p{
+            opacity:0.8;
+            max-width:700px;
+            margin:auto;
+        }
+
+        .pdf-container{
+            width:100%;
+            height:85vh;
+            border-radius:20px;
+            overflow:hidden;
+            box-shadow:0 10px 30px rgba(0,0,0,0.25);
+        }
+
+        .pdf-container iframe{
+            width:100%;
+            height:100%;
+            border:none;
+        }
+
+        .reader-actions{
+            margin-top:30px;
+            display:flex;
+            justify-content:center;
+            gap:15px;
+            flex-wrap:wrap;
+        }
+
+        .reader-btn{
+            padding:12px 25px;
+            border-radius:10px;
+            text-decoration:none;
+            font-weight:600;
+        }
+
+        .back-btn{
+            background:#222;
+            color:white;
+        }
+
+        .download-btn{
+            background:#4f46e5;
+            color:white;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div id="navbar"></div>
+
+<main>
+
+<section class="reader-section">
+
+    <div class="reader-header">
+        <h1>KHWAAB</h1>
+
+        <p>
+            The original written edition that marked the
+            beginning of the KHWAAB universe.
+        </p>
+    </div>
+
+    <div class="pdf-container">
+
+        <iframe src="assets/pdf/khwaab.pdf"></iframe>
+
+    </div>
+
+    <div class="reader-actions">
+
+        <a href="anant-studio.html" class="reader-btn back-btn">
+            ← Back to Anant Studio
+        </a>
+
+        <a href="assets/pdf/khwaab.pdf"
+           target="_blank"
+           class="reader-btn download-btn">
+
+            Open Fullscreen
+        </a>
+
+    </div>
+
+</section>
+
+</main>
+
+<div id="footer"></div>
+
+<script src="js/components.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/cursor.js"></script>
+<script src="js/navbar.js"></script>
+
+</body>
+</html>

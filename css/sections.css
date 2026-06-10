@@ -847,3 +847,66 @@
     }
 
 }
+/* NPTEL PAGE */
+
+.certificate-preview{
+    display:flex;
+    justify-content:center;
+    margin:40px auto;
+}
+
+.certificate-preview img{
+    width:100%;
+    max-width:900px;
+
+    border-radius:20px;
+    display:block;
+}
+
+/* badges */
+
+.skill-tags{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:12px;
+
+    margin:25px auto;
+}
+
+/* details */
+
+.certificate-details{
+    max-width:900px;
+    margin:50px auto;
+
+    padding:40px;
+
+    background:rgba(255,255,255,0.03);
+
+    border:1px solid rgba(0,255,255,0.15);
+
+    border-radius:20px;
+
+    -webkit-backdrop-filter:blur(10px);
+    backdrop-filter:blur(10px);
+}
+
+.certificate-details h2{
+    text-align:center;
+    margin-bottom:30px;
+
+    font-size:2rem;
+}
+.certificate-details h3{
+    margin-top:35px;
+    margin-bottom:20px;
+    text-align:center;
+}
+.certificate-details p{
+    line-height:1.8;
+    margin-bottom:12px;
+}
+.section-title{
+    text-align:center;
+}

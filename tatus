@@ -1,0 +1,75 @@
+[33mcommit cddef539ac068e07bea6657130191db094d65e8a[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Karthik Vijay <vijayankarthik2006@gmail.com>
+Date:   Sun Jul 19 12:41:06 2026 +0530
+
+    Comic Errors Solved
+
+[1mdiff --git a/assets/images/MongoDb/mongo1.jpg b/assets/images/MongoDb/mongo1.jpg[m
+[1mdeleted file mode 100644[m
+[1mindex 3bbe93c..0000000[m
+Binary files a/assets/images/MongoDb/mongo1.jpg and /dev/null differ
+[1mdiff --git a/assets/images/MongoDb/mongo10.jpg b/assets/images/MongoDb/mongo10.jpg[m
+[1mdeleted file mode 100644[m
+[1mindex 4b45ed7..0000000[m
+Binary files a/assets/images/MongoDb/mongo10.jpg and /dev/null differ
+[1mdiff --git a/assets/images/MongoDb/mongo11.jpg b/assets/images/MongoDb/mongo11.jpg[m
+[1mdeleted file mode 100644[m
+[1mindex 239abd1..0000000[m
+Binary files a/assets/images/MongoDb/mongo11.jpg and /dev/null differ
+[1mdiff --git a/assets/images/MongoDb/mongo12.jpg b/assets/images/MongoDb/mongo12.jpg[m
+[1mdeleted file mode 100644[m
+[1mindex fb2eda6..0000000[m
+Binary files a/assets/images/MongoDb/mongo12.jpg and /dev/null differ
+[1mdiff --git a/assets/images/MongoDb/mongo2.jpg b/assets/images/MongoDb/mongo2.jpg[m
+[1mdeleted file mode 100644[m
+[1mindex 74a1351..0000000[m
+Binary files a/assets/images/MongoDb/mongo2.jpg and /dev/null differ
+[1mdiff --git a/assets/images/MongoDb/mongo3.jpg b/assets/images/MongoDb/mongo3.jpg[m
+[1mdeleted file mode 100644[m
+[1mindex fdcc516..0000000[m
+Binary files a/assets/images/MongoDb/mongo3.jpg and /dev/null differ
+[1mdiff --git a/assets/images/MongoDb/mongo4.jpg b/assets/images/MongoDb/mongo4.jpg[m
+[1mdeleted file mode 100644[m
+[1mindex b9c788a..0000000[m
+Binary files a/assets/images/MongoDb/mongo4.jpg and /dev/null differ
+[1mdiff --git a/assets/images/MongoDb/mongo5.jpg b/assets/images/MongoDb/mongo5.jpg[m
+[1mdeleted file mode 100644[m
+[1mindex f329b9e..0000000[m
+Binary files a/assets/images/MongoDb/mongo5.jpg and /dev/null differ
+[1mdiff --git a/assets/images/MongoDb/mongo6.jpg b/assets/images/MongoDb/mongo6.jpg[m
+[1mdeleted file mode 100644[m
+[1mindex 36d96e2..0000000[m
+Binary files a/assets/images/MongoDb/mongo6.jpg and /dev/null differ
+[1mdiff --git a/assets/images/MongoDb/mongo7.jpg b/assets/images/MongoDb/mongo7.jpg[m
+[1mdeleted file mode 100644[m
+[1mindex d7aea6a..0000000[m
+Binary files a/assets/images/MongoDb/mongo7.jpg and /dev/null differ
+[1mdiff --git a/assets/images/MongoDb/mongo8.jpg b/assets/images/MongoDb/mongo8.jpg[m
+[1mdeleted file mode 100644[m
+[1mindex 5fd8003..0000000[m
+Binary files a/assets/images/MongoDb/mongo8.jpg and /dev/null differ
+[1mdiff --git a/assets/images/MongoDb/mongo9.jpg b/assets/images/MongoDb/mongo9.jpg[m
+[1mdeleted file mode 100644[m
+[1mindex 33833b2..0000000[m
+Binary files a/assets/images/MongoDb/mongo9.jpg and /dev/null differ
+[1mdiff --git a/assets/images/anant-logo.png b/assets/images/anant-logo.png[m
+[1mdeleted file mode 100644[m
+[1mindex 5ee7669..0000000[m
+Binary files a/assets/images/anant-logo.png and /dev/null differ
+[1mdiff --git a/assets/images/announcement/Frontendcode.png b/assets/images/announcement/Frontendcode.png[m
+[1mdeleted file mode 100644[m
+[1mindex 0adfada..0000000[m
+Binary files a/assets/images/announcement/Frontendcode.png and /dev/null differ
+[1mdiff --git a/assets/images/announcement/aicode.png b/assets/images/announcement/aicode.png[m
+[1mdeleted file mode 100644[m
+[1mindex e4855d0..0000000[m
+Binary files a/assets/images/announcement/aicode.png and /dev/null differ
+[1mdiff --git a/assets/images/announcement/char1-1.png b/assets/images/announcement/char1-1.png[m
+[1mdeleted file mode 100644[m
+[1mindex c047cf0..0000000[m
+Binary files a/assets/images/announcement/char1-1.png and /dev/null differ
+[1mdiff --git a/assets/images/announcement/char1-2.png b/assets/images/announcement/char1-2.png[m
+[1mdeleted file mode 100644[m
+[1mindex 1af5454..0000000[m
+Binary files a/assets/images/announcement/char1-2.png and /dev/null differ
+[1mdiff --git a/assets/imag

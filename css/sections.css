@@ -910,3 +910,71 @@
 .section-title{
     text-align:center;
 }
+/* ================= PROJECT CARDS FIX ================= */
+
+.studio-projects {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 32px;
+    margin-top: 60px;
+    align-items: stretch;
+}
+
+.studio-projects .project-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 48px;
+    min-height: 500px;
+    box-sizing: border-box;
+}
+
+.studio-projects .project-card h3 {
+    margin: 0 0 32px;
+    font-size: 26px;
+    line-height: 1.35;
+    font-weight: 700;
+}
+
+.studio-projects .project-card p {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.studio-projects .project-buttons {
+    margin-top: 40px;
+}
+
+.studio-projects .disabled-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+    .studio-projects {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        margin-top: 40px;
+    }
+
+    .studio-projects .project-card {
+        padding: 32px;
+        min-height: auto;
+    }
+
+    .studio-projects .project-card h3 {
+        font-size: 24px;
+    }
+
+    .studio-projects .project-card p {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+}

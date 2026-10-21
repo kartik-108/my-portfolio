@@ -1,0 +1,16 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "rewrites": [
+    { "source": "/about", "destination": "/index.html" },
+    { "source": "/journey", "destination": "/index.html" },
+    { "source": "/projects", "destination": "/index.html" },
+    { "source": "/projects/:id", "destination": "/index.html" },
+    { "source": "/creative", "destination": "/index.html" },
+    { "source": "/creative/:id", "destination": "/index.html" },
+    { "source": "/anant-vyuha", "destination": "/index.html" },
+    { "source": "/skills", "destination": "/index.html" },
+    { "source": "/certificates", "destination": "/index.html" },
+    { "source": "/now", "destination": "/index.html" },
+    { "source": "/contact", "destination": "/index.html" }
+  ]
+}

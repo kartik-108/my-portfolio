@@ -1,0 +1,125 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Archivo Black", "Arial Black", sans-serif;
+  --font-mono: "JetBrains Mono", "Fira Code", monospace;
+  --font-body: "Inter", system-ui, sans-serif;
+
+  --color-ink: #0a0a0a;
+  --color-paper: #f4f1ea;
+  --color-blue: #2a5cff;
+  --color-green: #9dff2a;
+  --color-orange: #ff5a1f;
+  --color-red: #ff2b2b;
+  --color-purple: #8a3ffc;
+}
+
+:root {
+  color-scheme: dark;
+  --cursor-x: 50vw;
+  --cursor-y: 50vh;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--color-ink);
+  color: var(--color-paper);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-green);
+  color: var(--color-ink);
+}
+
+/* Brutalist primitives, reused everywhere instead of ad hoc shadow/border values */
+.brutal-border {
+  border: 3px solid var(--color-paper);
+}
+
+.brutal-shadow {
+  box-shadow: 8px 8px 0 var(--color-paper);
+}
+
+.brutal-shadow-sm {
+  box-shadow: 5px 5px 0 var(--color-paper);
+}
+
+.brutal-shadow-accent {
+  box-shadow: 8px 8px 0 currentColor;
+}
+
+.display-font {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+  line-height: 0.9;
+}
+
+.mono-font {
+  font-family: var(--font-mono);
+}
+
+.noise-overlay {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  opacity: 0.035;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Custom cursor — disabled automatically on touch devices via JS class on <body> */
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  border: 2px solid var(--color-paper);
+  pointer-events: none;
+  z-index: 100;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+  transition: width 0.18s ease, height 0.18s ease, background-color 0.18s ease;
+  will-change: transform;
+}
+
+body.touch-device .custom-cursor {
+  display: none;
+}
+
+.scrollbar-none {
+  scrollbar-width: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+.text-outline {
+  -webkit-text-stroke: 2px var(--color-paper);
+  color: transparent;
+}
+
+@media (max-width: 767px) {
+  .text-outline {
+    -webkit-text-stroke: 1.2px var(--color-paper);
+  }
+}

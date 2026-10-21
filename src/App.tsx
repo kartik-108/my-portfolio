@@ -3,6 +3,7 @@ import { Suspense, lazy, useEffect } from 'react';
 import CustomCursor from './components/CustomCursor';
 import Nav from './components/Nav';
 import Footer from './sections/Footer';
+import MusicPlayer from './components/MusicPlayer';
 import Home from './pages/Home';
 
 // Route-level code splitting: every page beyond Home is lazy-loaded so the
@@ -38,6 +39,7 @@ export default function App() {
       <div aria-hidden className="noise-overlay" />
       <CustomCursor />
       <Nav />
+      <MusicPlayer />
       <ScrollToTop />
       <main>
         <Suspense fallback={<RouteFallback />}>
